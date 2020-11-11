@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="action_analytic_line_report_wizard_menu"
+        name="Reporte de Entradas Analiticas"
+        action="action_analytic_line_report_wizard"
+        parent="account.account_reports_management_menu"
+        groups="account.group_account_manager,account.group_account_user"
+        />
+
+</odoo>

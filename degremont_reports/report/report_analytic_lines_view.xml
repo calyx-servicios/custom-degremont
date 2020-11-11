@@ -1,0 +1,27 @@
+
+
+<odoo>
+    <data>
+
+        <record id="report_analytic_lines_account_tree" model="ir.ui.view">
+            <field name="name">report_analytic_lines_account.tree</field>
+            <field name="model">report_analytic_lines_account</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="proyect" />
+                    <field name="departure" />
+                    <field name="date"/>
+                    <field name="account_id" />
+                    <field name="invoice_id" />
+                    <field name="partner_id" />
+                    <field name="description"/>
+                    <field name="amount"/>
+                    <field name="currency_id" />
+                    <field name="amount_currency"/>
+                    <field name="account_type_id" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

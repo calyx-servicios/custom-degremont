@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+    <template id="degremont_reports.analytic_lines_report_qweb">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="degremont_reports.internal_layout">
+                    <t t-call="degremont_reports.analytic_lines_report_base"/>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="degremont_reports.analytic_lines_report_base">
+
+        <!-- Defines global variables used by internal layout -->
+        <t t-set="title"> Analytic Lines Report - <t t-raw="o.company_id.name"/> - <t t-raw="o.company_id.currency_id.name"/></t>
+        <t t-set="company_name" t-value="o.company_id.name"/>
+        <t t-set="res_company" t-value="o.company_id"/>
+        <div class="page">
+            <div class="row">
+                <h4 class="mt0" t-esc="title or 'Odoo Report'" style="text-align: center;"/>
+            </div>
+            <!-- Display filters -->
+            <t t-call="degremont_reports.analytic_lines_report_filters"/>
+
+            <div class="act_as_table list_table" style="margin-top: 10px;"/>
+
+            <!-- Display account lines -->
+
+            <div class="act_as_table data_table" style="width: 100%;">
+                <!-- Display account header -->
+                <t t-call="degremont_reports.analytic_lines_report_lines_header"/>
+
+                <!-- Display each lines -->
+                <t t-foreach="o.proyect_ids" t-as="proyect">
+
+                    <!-- Display account lines -->
+                    <!-- <t t-set="style" t-value="'font-size: ' + str(14 - proyect.proyect_id.level) + 'px; margin-left: ' + str(proyect.proyect_id.level* 4) + 'px;'"/> -->
+                    <t t-call="degremont_reports.report_analytic_lines_proyect"/>
+                    <!-- Adapt style -->
+                </t>
+            </div>
+
+        </div>
+    </template>
+
+    <template id="degremont_reports.analytic_lines_report_filters">
+        <div class="act_as_table data_table" style="width: 100%;">
+            <div class="act_as_row labels">
+                <div class="act_as_cell">Date range filter</div>
+
+            </div>
+            <div class="act_as_row">
+                <div class="act_as_cell">
+                        Since: <span t-field="o.date_since"/> From: <span t-field="o.date_from"/> To: <span t-field="o.date_to"/>
+                </div>
+
+            </div>
+
+
+        </div>
+    </template>
+
+    <template id="degremont_reports.analytic_lines_report_lines_header">
+        <!-- Display table headers for lines -->
+        <div class="act_as_thead">
+            <div class="act_as_row labels">
+
+
+
+                <div class="act_as_cell" style="width: 3%;">Proyect</div>
+
+                <div class="act_as_cell" style="width: 7%;">Departure</div>
+                <t t-if="not o.group_by_account">
+                  <div class="act_as_cell" style="width: 5%;">Date</div>
+
+                  <div class="act_as_cell" style="width: 5%;">Account</div>
+
+                  <div class="act_as_cell" style="width: 5%;">Invoice</div>
+
+                  <div class="act_as_cell" style="width: 5%;">Partner</div>
+
+                  <div class="act_as_cell" style="width: 6%;">Description</div>
+                </t>
+                <t t-if="o.group_by_account">
+                    <div class="act_as_cell" style="width: 5%;">Accumulated</div>
+                    <t t-foreach="o.child_ids" t-as="child">
+                        <div class="act_as_cell" style="width: 5%;">
+                            <span>
+                                <t t-esc="o._get_format_date_header(child.date_from)"/>
+                            </span>
+                        </div>
+                    </t>
+                </t>
+                <div class="act_as_cell" style="width: 5%;">Amount</div>
+
+                <div class="act_as_cell" style="width: 3%;">Currency</div>
+
+                <div class="act_as_cell" style="width: 6%;">Amount Currency</div>
+                
+
+            </div>
+        </div>
+    </template>
+
+    <template id="degremont_reports.report_analytic_lines_account">
+        <!-- # line -->
+        <div class="act_as_row lines">
+            <!--## Code-->
+
+        </div>
+    </template>
+
+    <template id="degremont_reports.report_analytic_lines_proyect">
+        <!-- # line -->
+        <div class="act_as_row lines" style="background:#fbfbfb; font-size:13px;font-weight:bold;">
+            <!--## Code-->
+            <div class="act_as_cell" ><span t-field="proyect.name"/></div>
+
+            <div class="act_as_cell" ></div>
+
+            <t t-if="not o.group_by_account">
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+           </t>
+
+
+            <t t-if="o.group_by_account">
+                    <div class="act_as_cell" ><span t-field="proyect.accumulated"/></div>
+                <t t-foreach="o.child_ids" t-as="child">
+                    <div class="act_as_cell" style="width: 5%;">
+                        <span>
+                            <t t-att-style="style" t-raw="o.get_month_proyect(child, proyect)" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </span>
+                    </div>
+                </t>
+                <div class="act_as_cell" ><span t-field="proyect.total"/></div>
+            </t>
+
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+            
+      </div>
+
+
+        <t t-foreach="proyect.departure_ids" t-as="departure">
+
+            <t t-call="degremont_reports.report_analytic_lines_departure"/>
+
+        </t>
+      <t t-if="not o.group_by_account">
+        <!-- </t> -->
+        <div class="act_as_row lines" style="background:#fafafa; font-size:13px;font-weight:bold;">
+              <!--## Code-->
+              <div class="act_as_cell" ><span t-field="proyect.name"/></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" >Total:</div>
+
+              <div class="act_as_cell" ><span t-field="proyect.amount"/></div>
+
+              <div class="act_as_cell" ></div>
+
+              <div class="act_as_cell" ></div>
+
+        </div>
+      </t>
+    </template>
+
+    <template id="degremont_reports.report_analytic_lines_departure">
+        <!-- # line -->
+        <div class="act_as_row lines" style="background:#eeeeee;font-size:12px;">
+            <!--## Code-->
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ><span t-field="departure.name"/></div>
+            <t t-if="not o.group_by_account">
+                <div class="act_as_cell" ></div>
+
+                <div class="act_as_cell" ></div>
+
+                <div class="act_as_cell" ></div>
+
+                <div class="act_as_cell" ></div>
+
+                <div class="act_as_cell" ></div>
+
+            </t>
+            <t t-if="not o.group_by_account">
+              <div class="act_as_cell" ></div>
+            </t>
+            <t t-if="o.group_by_account">
+                <div class="act_as_cell" ><span t-field="departure.accumulated"/></div>
+                <t t-foreach="o.child_ids" t-as="child">
+                        <div class="act_as_cell" style="width: 5%;">
+                            <span>
+                                <t t-att-style="style" t-raw="o.get_month_departure(child, departure, proyect)" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </span>
+                        </div>
+                    </t>
+              <div class="act_as_cell" ><span t-field="departure.total"/></div>
+            </t>
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+            
+      </div>
+      <t t-if="not o.group_by_account">
+        <t t-foreach="departure.account_ids" t-as="account">
+
+            <t t-call="degremont_reports.report_analytic_lines_account"/>
+
+        </t>
+
+        <div class="act_as_row lines" style="background:#ededed;font-size:12px;">
+            <!--## Code-->
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ><span t-field="departure.name"/></div>
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" >Sub Total:</div>
+
+            <div class="act_as_cell" ><span t-field="departure.amount"/></div>
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+            </div>
+      </t>
+
+    </template>
+
+
+    <template id="degremont_reports.report_analytic_lines_account">
+        <!-- # line -->
+        <div class="act_as_row lines">
+            <!--## Code-->
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ></div>
+
+            <div class="act_as_cell" ><span t-field="account.date"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.account_id.code"/>-<span t-field="account.account_id.name"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.invoice_id.display_name"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.partner_id.name"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.description"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.amount"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.currency_id.name"/></div>
+
+            <div class="act_as_cell" ><span t-field="account.amount_currency"/></div>
+
+      </div>
+      <t t-if="not o.group_by_account">
+        <t t-foreach="departure.account_ids" t-as="account">
+
+            <!-- <t t-call="degremont_reports.report_analytic_lines_line"/> -->
+
+        </t>
+      </t>
+    </template>
+
+    <template id="degremont_reports.analytic_lines_report_footer">
+        <!-- Display account footer -->
+
+    </template>
+
+
+
+    <template id="report_analytic_lines">
+        <div class="o_account_financial_reports_page">
+            <t t-call="degremont_reports.analytic_lines_report_base"/>
+        </div>
+    </template>
+
+
+
+</odoo>
