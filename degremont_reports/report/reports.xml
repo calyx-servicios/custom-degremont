@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- PDF/HMTL REPORTS -->
+
+
+    <!-- Analytic Lines -->
+    <report
+      id="action_report_analytic_lines_qweb"
+      model="report_analytic_lines"
+      string="Analytic Lines QWEB"
+      report_type="qweb-pdf"
+      name="degremont_reports.analytic_lines_report_qweb"
+      file="degremont_reports.analytic_lines_report_qweb"
+      />
+
+    <report
+      id="action_report_analytic_lines_html"
+      model="report_analytic_lines"
+      string="Analytic Lines HTML"
+      report_type="qweb-html"
+      name="degremont_reports.analytic_lines_report_qweb"
+      file="degremont_reports.analytic_lines_report_html"
+      />
+
+
+
+
+      <record id="action_report_analytic_lines_xlsx" model="ir.actions.report">
+          <field name="name">Analytic Lines XLSX</field>
+          <field name="model">report_analytic_lines</field>
+          <field name="type">ir.actions.report</field>
+          <field name="report_name">report_analytic_lines_xlsx</field>
+          <field name="report_type">xlsx</field>
+          <field name="report_file">report_analytic_lines</field>
+      </record>
+
+
+
+
+
+
+
+
+
+
+</odoo>

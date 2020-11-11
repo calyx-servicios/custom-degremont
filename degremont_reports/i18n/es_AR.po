@@ -1,0 +1,513 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* degremont_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-28 16:13+0000\n"
+"PO-Revision-Date: 2020-02-28 16:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Amount</strong>"
+msgstr "<strong>Importe</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Analytic Account</strong>"
+msgstr "<strong>Cuenta Analitica</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Date Order</strong>"
+msgstr "<strong>Fecha</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Description</strong>"
+msgstr "<strong>Descripción</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>Fecha de orden:</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Our Order Reference:</strong>"
+msgstr "<strong>Ref. de nuestra orden:</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Qty</strong>"
+msgstr "<strong>Cant</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Precio Unidad</strong>"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "<strong>Your Order Reference:</strong>"
+msgstr "<strong>Su referencia de pedido:</strong>"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:44
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:176
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_account_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_ids
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_account_ids
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_account_type_id
+msgid "Account Type"
+msgstr "Tipo de Cuenta"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_res_config_settings_account_type_ids
+msgid "Account Types"
+msgstr "Tipos de Cuentas"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:74
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:204
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:232
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_accumulated
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_accumulated
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Accumulated"
+msgstr "Anterior"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:58
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:91
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:210
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:238
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:255
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:277
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_amount
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_amount
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_total
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_amount
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_total
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Amount"
+msgstr "Importe"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_amount_currency
+msgid "Amount Currency"
+msgstr "Importe en ¿oneda"
+
+#. module: degremont_reports
+#: model:ir.actions.act_window,name:degremont_reports.action_analytic_line_report_wizard
+msgid "Analytic Line Report"
+msgstr "Reporte Linea Analitica"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_analytic_line_report_wizard
+msgid "Analytic Line Report Wizard"
+msgstr "Asistente Reporte Linea Analitica"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:27
+#, python-format
+msgid "Analytic Lines"
+msgstr "Entradas Analíticas"
+
+#. module: degremont_reports
+#: model:ir.actions.report,name:degremont_reports.action_report_analytic_lines_html
+msgid "Analytic Lines HTML"
+msgstr "Entradas Analíticas"
+
+#. module: degremont_reports
+#: model:ir.actions.report,name:degremont_reports.action_report_analytic_lines_qweb
+msgid "Analytic Lines QWEB"
+msgstr "Entradas Analíticas"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/wizard/analytic_line_report_wizard.py:99
+#, python-format
+msgid "Analytic Lines Report"
+msgstr "Reporte Lineas Analiticas"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_base
+msgid "Analytic Lines Report -"
+msgstr "Reporte Entradas Analíticas -"
+
+#. module: degremont_reports
+#: model:ir.actions.report,name:degremont_reports.action_report_analytic_lines_xlsx
+msgid "Analytic Lines XLSX"
+msgstr "Entradas Analíticas"
+
+#. module: degremont_reports
+#: model:ir.actions.report,name:degremont_reports.action_aeroo_report_ar_payment_degremont
+msgid "Argentinian Aeroo Payment Degtremont"
+msgstr "Reporte Aeero Degremont"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_line_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_child_ids
+msgid "Child"
+msgstr "Child"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_company_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_create_uid
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_create_date
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_currency_id
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:41
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_date
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_date_from
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_date_from
+msgid "Date From"
+msgstr "Fecha de inicio"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_date_since
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_date_since
+msgid "Date Since"
+msgstr "Fecha Inicial"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_date_to
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_date_to
+msgid "Date To"
+msgstr "Fecha final"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_date_range_id
+msgid "Date range"
+msgstr "Periodo"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:109
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_filters
+#, python-format
+msgid "Date range filter"
+msgstr "Filtro periodo"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:37
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:69
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:227
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_departure
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_departure_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_departure_ids
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Departure"
+msgstr "Partida"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:55
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:260
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:282
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_description
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_display_name
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_display_name
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_display_name
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_display_name
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_display_name
+#: model:ir.model.fields,field_description:degremont_reports.field_report_report_analytic_lines_xlsx_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/models/account_payment_group.py:32
+#, python-format
+msgid "Draft Payment"
+msgstr "Pago Borrador"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_line_report_wizard
+msgid "Export PDF"
+msgstr "Exportar a PDF"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_line_report_wizard
+msgid "Export XLSX"
+msgstr "Exportar a XLSX"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_filter_account_type_ids
+msgid "Filter Account Type"
+msgstr "Filtro Tipo de Cuenta"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_account_type_ids
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_filter_type_ids
+msgid "Filtrar por tipos de cuenta"
+msgstr "Filtrar por tipos de cuenta"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_filters
+msgid "From:"
+msgstr "Desde:"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_group_by_account
+msgid "Group By Account"
+msgstr "Agrupar por Partida"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_group_by_account
+msgid "Group by Account"
+msgstr "Agrupar por Partida"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_report_analytic_lines_xlsx_id
+msgid "ID"
+msgstr "ID"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:48
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:183
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_invoice_id
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_invoice_display_name
+msgid "Invoice Display Name"
+msgstr "Factura"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard___last_update
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines___last_update
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account___last_update
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure___last_update
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect___last_update
+#: model:ir.model.fields,field_description:degremont_reports.field_report_report_analytic_lines_xlsx___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_write_uid
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_analytic_line_report_wizard_write_date
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_name
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_parent_id
+msgid "Parent"
+msgstr "Padre"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:51
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_partner_id
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Partner"
+msgstr "Contacto"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_account_payment_group
+msgid "Payment Group"
+msgstr "Grupo de Pagos"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_line_report_wizard
+#: model:ir.ui.view,arch_db:degremont_reports.view_account_payment_group_form_degremont
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:33
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:65
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:199
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_proyect
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_proyect_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_proyect_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_ids
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_lines_header
+#, python-format
+msgid "Proyect"
+msgstr "Proyecto"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "Purchase Order #"
+msgstr "Orden #"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_report_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_report_id
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_report_id
+msgid "Report"
+msgstr "Reporte"
+
+#. module: degremont_reports
+#: model:ir.ui.menu,name:degremont_reports.action_analytic_line_report_wizard_menu
+msgid "Reporte de Entradas Analiticas"
+msgstr "Reporte de Entradas Analiticas"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_purchaseorder_document_degremont
+msgid "Request for Quotation #"
+msgstr "Solicitud de presupuesto #"
+
+#. module: degremont_reports
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_account_sequence
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_departure_sequence
+#: model:ir.model.fields,field_description:degremont_reports.field_report_analytic_lines_proyect_sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_filters
+msgid "Since:"
+msgstr "Inicio:"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:110
+#, python-format
+msgid "Since: %s From: %s To: %s"
+msgstr "Inicio: %s Desde: %s Hasta: %s"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_analytic_lines_departure
+msgid "Sub Total:"
+msgstr "Sub Total:"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_lines_report_filters
+msgid "To:"
+msgstr "A:"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.report_analytic_lines_proyect
+msgid "Total:"
+msgstr "Total:"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/models/account_payment_group.py:22
+#, python-format
+msgid "You can not confirm a payment group without debt lines!"
+msgstr "No puede confirmar un pago sin deudas a cancelar"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:75
+#, python-format
+msgid "accumulated"
+msgstr "anterior"
+
+#. module: degremont_reports
+#: model:ir.ui.view,arch_db:degremont_reports.analytic_line_report_wizard
+msgid "or"
+msgstr "o"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/report/report_analytic_lines_xlsx.py:85
+#, python-format
+msgid "period_balance"
+msgstr "Periodo"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_report_report_analytic_lines_xlsx
+msgid "report.report_analytic_lines_xlsx"
+msgstr "report.report_analytic_lines_xlsx"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_report_analytic_lines
+msgid "report_analytic_lines"
+msgstr "report_analytic_lines"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_report_analytic_lines_account
+msgid "report_analytic_lines_account"
+msgstr "report_analytic_lines_account"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_report_analytic_lines_departure
+msgid "report_analytic_lines_departure"
+msgstr "report_analytic_lines_departure"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_report_analytic_lines_partida
+msgid "report_analytic_lines_partida"
+msgstr "report_analytic_lines_partida"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_report_analytic_lines_proyect
+msgid "report_analytic_lines_proyect"
+msgstr "report_analytic_lines_proyect"
+
+#. module: degremont_reports
+#: model:ir.model,name:degremont_reports.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
+
+#. module: degremont_reports
+#: code:addons/degremont_reports/wizard/analytic_line_report_wizard.py:88
+#, python-format
+msgid "Dates are incorrect. Verify this rule: Initial <= From <= To"
+msgstr "Las Fechas son Incorrectas. Verifique esta Regla: Inicial <= Desde <= Hasta"
