@@ -85,7 +85,7 @@ class Analytic_line_Report(models.TransientModel):
         end=datetime.datetime.strptime(self.date_to, "%Y-%m-%d")
         _logger.debug('Start Day: %s' % start)
         _logger.debug('End Day: %s' % end)
-        months=OrderedDict(((start + timedelta(_)).strftime(r"%m-%y"), None) for _ in xrange((end - start).days)).keys()
+        months=OrderedDict(((start + timedelta(_)).strftime(r"%m-%y"), None) for _ in range((end - start).days)).keys()
         _logger.debug(months)
         for month in months:
             _month=datetime.datetime.strptime(month, "%m-%y")
